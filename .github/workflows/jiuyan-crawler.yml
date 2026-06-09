@@ -1,5 +1,17 @@
 name: 韭研公社每日舆情汇总
 
+permissions:
+  contents: write
+  pages: write
+
+on:
+  schedule:
+    - cron: '30 0 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  crawl:
+    # ... rest of config
 on:
   schedule:
     - cron: '30 0 * * 1-5'
